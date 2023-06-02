@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>
+      CHRONOTRAVEL
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <style>
+      .time-travel {
+        background-image: url("time travel.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+      }
+      #time-travel2 {
+        font-family: Cursive;
+        font-weight: Bold;
+        font-size: 20px;
+        position: absolute;
+        bottom: 150px;
+        width: 55%;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body class="time-travel">
+    <p id="time-travel2">
+      Although humans can't hop into a time machine and go back in time, we do
+      know that clocks on airplanes and satellites travel at a different speed
+      than those on Earth.We all travel in time! We travel one year in time
+      between birthdays, for example. And we are all traveling in time at
+      approximately the same speed: 1 second per second.
+    </p>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#"></a></div>
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"
+            ><i class="fas fa-times"></i
+          ></label>
+          <li>
+            <a href="#" class="desktop-item">TIME TRAVEL</a>
+            <input type="checkbox" id="showMega" />
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <img src="img.jpg" alt="" />
+                </div>
+                <div class="row">
+                  <header>PREHISTORIC PERIOD</header>
+                  <ul class="mega-links">
+                    <li>
+                      <a href="universeinception.html" target="showframe"
+                        >Universe Inception</a
+                      >
+                    </li>
+                    <li>
+                      <a href="mesozoicera.html" target="showframe"
+                        >Mesozoic Era</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>HUMAN EVOLUTION</header>
+                  <ul class="mega-links">
+                    <li>
+                      <a href="primitiveperiod.html" target="showframe"
+                        >Primitive period</a
+                      >
+                    </li>
+                    <li>
+                      <a href="kinglycosmos.html" target="showframe"
+                        >Kingly Cosmos</a
+                      >
+                    </li>
+                    <li>
+                      <a href="independentterra.html" target="showframe"
+                        >Independent Terra</a
+                      >
+                    </li>
+                    <li>
+                      <a href="tomorrowland.html" target="showframe"
+                        >Tomorrowland</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"
+          ><i class="fas fa-bars"></i
+        ></label>
+      </div>
+    </nav>
+    <div class="body-text">
+      <div class="title">WELCOME TO CHRONOTRAVEL</div>
+    </div>
+    <script>
+      const showMega = document.getElementById("showMega");
+      const navLinks = document.querySelectorAll(".nav-links li");
+      const closeBtn = document.getElementById("close-btn");
+      const menuBtn = document.getElementById("menu-btn");
+
+      // Add click event listener to menu button
+      menuBtn.addEventListener("click", function () {
+        document.body.classList.toggle("menu-open");
+      });
+
+      // Add click event listener to close button
+      closeBtn.addEventListener("click", function () {
+        document.body.classList.remove("menu-open");
+        showMega.checked = false;
+      });
+
+      // Add click event listener to mega links
+      navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          document.body.classList.remove("menu-open");
+          showMega.checked = false;
+        });
+      });
+    </script>
+  </body>
+</html>
